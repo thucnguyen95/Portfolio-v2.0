@@ -6,7 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. Node.js
 
 ## Dependencies ##
+1. `npm i react-router-dom`
 1. `npm i redux` [[redux](https://www.npmjs.com/package/redux)]
+1. `npm i react-redux`
+1. `npm i react-cookie`
+1. `npm i @material-ui/core`
+1. `npm i @material-ui/icons`
+1. `npm i @material-ui/lab`
+1. `npm i node-sass`
 
 ## Available Scripts
 

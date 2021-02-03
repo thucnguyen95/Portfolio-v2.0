@@ -1,0 +1,168 @@
+@import '../../vars/base';
+
+#about {
+
+    .cover-image-wrapper {
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+        }
+    }
+    .dim-image {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    h2 {
+        color: var(--color-text-on-primary);
+    }
+    .education-wrapper h2,
+    .technical-skills-wrapper h2,
+    .pastimes-wrapper h2 {
+        text-align: center;
+    }
+
+    .description-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 48px 0px;
+    }
+    .description-profile {
+        flex-basis: 25%;
+        display: flex;
+        justify-content: center;
+        padding: 24px;
+        margin: 0px 24px;
+        // border: 1px dashed red;
+
+        > div {
+            min-width: 320px;
+            min-height: 320px;
+            border-radius: 50%;
+            // border: 1px dashed red;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    .description-blurb {
+        // flex: 1 0 auto;
+        @extend %paper;
+        flex-basis: 40%;
+        padding: 24px;
+        margin: 0px 24px;
+
+        > div {
+            margin: 24px 0px;
+        }
+    }
+    .description-year {
+        color: $color-indigo !important;
+        font-weight: bold;
+        font-size: $rem-medium;
+    }
+    .description-text {
+    }
+
+    .education-wrapper {
+        width: 80%;
+        margin: 48px auto;
+
+        .card-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 24px 0px;
+        }
+        .card {
+            @extend %paper;
+            background-color: var(--color-primary);
+            min-width: 288px;
+            flex-basis: 25%;
+            margin: 0px 12px 12px 12px;
+            box-shadow: $component-shadow;
+            // border: 1px dashed red;
+
+            > div:nth-of-type(1) {
+                position: relative;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 244px;
+                    object-fit: cover;
+                }
+            }
+            > div:nth-of-type(2) {
+                color: var(--color-text-on-primary);
+                font-weight: bold;
+                padding: 8px;
+            }
+            > div:nth-of-type(3),
+            > div:nth-of-type(4) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 4px 8px;
+
+                > div:nth-of-type(1) {
+                    flex: 2;
+                }
+                > div :nth-of-type(2) {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .technical-skills-wrapper {
+        width: 80%;
+        margin: 48px auto;
+        .skills {
+            margin: 24px 0px;
+            // border: 1px dashed blue;
+        }
+        .skills > div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .category {
+            color: var(--color-text-on-primary);
+            font-weight: bold;
+            font-size: $rem-large;
+            flex-basis: 20%;
+            padding: 8px;
+            border: 1px dashed green;
+        }
+        .skill-chips {
+            flex-basis: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            // border: 1px dashed red;
+
+            > div {
+                margin: 8px;
+            }
+        }
+    }
+
+    .pastimes-wrapper {
+        width: 80%;
+        margin: 48px auto;
+    }
+}

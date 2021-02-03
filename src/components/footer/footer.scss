@@ -1,0 +1,10 @@
+@import '../../vars/base';
+
+#footer {
+    background-color: $color-footer;
+    padding: 16px 24px;
+
+    p {
+        color: var(--color-primary-light);
+    }
+}
