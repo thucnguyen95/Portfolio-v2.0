@@ -1,9 +1,17 @@
-import { aboutPageDetails } from "vars/vars";
-import { TECHNICAL_SKILLS } from "models/technical-skills"
+import { aboutPageDetails, networkingLinks, contactDetails } from "vars/vars";
+import { TECHNICAL_SKILLS } from "models/technical-skills";
 
 class ContentManager {
     constructor() {
 
+    }
+
+    static getLinks() {
+        return networkingLinks;
+    }
+
+    static getLinksAsList() {
+        return Object.values(networkingLinks);
     }
 
     static getAboutPageDescription() {
@@ -23,6 +31,14 @@ class ContentManager {
             });
         }
         return list;
+    }
+
+    static getPastimes() {
+        return aboutPageDetails.pastimes;
+    }
+
+    static getContactDetails() {
+        return contactDetails;
     }
 }
 export default ContentManager;

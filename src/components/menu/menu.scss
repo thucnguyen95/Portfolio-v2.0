@@ -12,7 +12,6 @@
         flex-basis: 20%;
         display: flex;
         justify-content: space-around;
-        // border: 1px dashed blue;
     }
     .menu-nav-link {
         color: var(--color-text-on-primary-dark);
@@ -20,7 +19,6 @@
         margin: 0px 12px;
         transition: all 0.3s ease;
         cursor: pointer;
-        // border: 1px dashed red;
 
         &:hover {
             color: var(--color-secondary);
@@ -33,16 +31,8 @@
 
     > div:nth-of-type(2) {
         display: flex;
-        // border: 1px dashed orange;
     }
-    .icon-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 4px;
-        margin: 0px 12px;
-        cursor: pointer;
-
+    .menu-icon-wrapper {
         &:hover {
             .MuiSvgIcon-root {
                 fill: var(--color-secondary) !important;

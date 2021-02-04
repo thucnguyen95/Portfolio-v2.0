@@ -1,7 +1,9 @@
 @import '../../vars/base';
 
 #about {
-
+    // ========================================================================
+    // Landing Page Cover Image
+    // ========================================================================
     .cover-image-wrapper {
         position: relative;
 
@@ -12,16 +14,11 @@
             object-fit: cover;
         }
     }
-    .dim-image {
-        background-color: rgba($color: #000000, $alpha: 0.5);
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
 
-    h2 {
+    // ========================================================================
+    // Headers and Wrappers
+    // ========================================================================
+    h2, h3 {
         color: var(--color-text-on-primary);
     }
     .education-wrapper h2,
@@ -30,6 +27,9 @@
         text-align: center;
     }
 
+    // ========================================================================
+    // Description and Profile Picture
+    // ========================================================================
     .description-wrapper {
         display: flex;
         justify-content: center;
@@ -42,13 +42,11 @@
         justify-content: center;
         padding: 24px;
         margin: 0px 24px;
-        // border: 1px dashed red;
 
         > div {
             min-width: 320px;
             min-height: 320px;
             border-radius: 50%;
-            // border: 1px dashed red;
         }
 
         img {
@@ -59,7 +57,6 @@
         }
     }
     .description-blurb {
-        // flex: 1 0 auto;
         @extend %paper;
         flex-basis: 40%;
         padding: 24px;
@@ -77,6 +74,9 @@
     .description-text {
     }
 
+    // ========================================================================
+    // Education
+    // ========================================================================
     .education-wrapper {
         width: 80%;
         margin: 48px auto;
@@ -89,12 +89,11 @@
         }
         .card {
             @extend %paper;
-            background-color: var(--color-primary);
+            background-color: var(--color-primary-light);
             min-width: 288px;
             flex-basis: 25%;
             margin: 0px 12px 12px 12px;
             box-shadow: $component-shadow;
-            // border: 1px dashed red;
 
             > div:nth-of-type(1) {
                 position: relative;
@@ -128,12 +127,14 @@
         }
     }
 
+    // ========================================================================
+    // Technical Skills
+    // ========================================================================
     .technical-skills-wrapper {
         width: 80%;
         margin: 48px auto;
         .skills {
             margin: 24px 0px;
-            // border: 1px dashed blue;
         }
         .skills > div {
             width: 100%;
@@ -147,13 +148,11 @@
             font-size: $rem-large;
             flex-basis: 20%;
             padding: 8px;
-            border: 1px dashed green;
         }
         .skill-chips {
             flex-basis: 50%;
             display: flex;
             flex-wrap: wrap;
-            // border: 1px dashed red;
 
             > div {
                 margin: 8px;
@@ -161,8 +160,46 @@
         }
     }
 
+    // ========================================================================
+    // Pastimes
+    // ========================================================================
     .pastimes-wrapper {
         width: 80%;
         margin: 48px auto;
+    }
+    .pastime-block {
+        display: flex;
+        justify-content: center;
+        margin: 24px 0px;
+    }
+
+    .pastime-blurb {
+        @extend %paper;
+        background-color: var(--color-primary-light);
+        flex-basis: 30%;
+        padding: 24px;
+        margin: 0px 24px;
+        box-shadow: $component-shadow;
+
+        p {
+            margin: 8px 0px;
+        }
+    }
+    .pastime-block:nth-of-type(2) {
+        .pastime-blurb > p:nth-of-type(2n + 1) {
+            color: $color-purple;
+            font-weight: bold;
+        }
+    }
+    .pastime-image {
+        flex-basis: 40%;
+        min-width: 288px;
+        margin: 0px 24px;
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
     }
 }

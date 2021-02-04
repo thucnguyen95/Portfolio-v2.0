@@ -13,7 +13,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. `npm i @material-ui/core`
 1. `npm i @material-ui/icons`
 1. `npm i @material-ui/lab`
+1. `npm i @mdi/react @mdi/js`
 1. `npm i node-sass`
+1. `npm i react-copy-to-clipboard`
 
 ## Available Scripts
 

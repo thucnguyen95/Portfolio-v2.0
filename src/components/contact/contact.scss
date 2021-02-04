@@ -1,0 +1,80 @@
+@import '../../vars/base';
+
+#contact {
+    margin-bottom: 100px;
+
+    .contact-cover-image {
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+        }
+    }
+    .contact-block {
+        @extend %paper;
+        background-color: var(--color-primary-light);
+        position: relative;
+        width: 50%;
+        min-width: 400px;
+        padding: 24px;
+        margin: -100px auto 0px;
+        box-shadow: $component-shadow;
+        z-index: 5;
+
+        h2 {
+            color: var(--color-text-on-primary);
+            text-align: center;
+            padding: 12px 24px;
+        }
+
+        > p:nth-of-type(1) {
+            width: 90%;
+            margin: 0px auto 24px;
+        }
+    }
+
+    .networking {
+        margin: 0px 0px 24px;
+    }
+    .networking-item {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 8px auto;
+        // border: 1px dashed red;
+
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px;
+        }
+        > p {
+            flex-shrink: 0;
+            padding: 4px;
+            margin: 0px 8px 0px 4px;
+            // border: 1px dashed;
+        }
+        > p:nth-of-type(1) {
+            flex-basis: 15%;
+            font-weight: bold;
+        }
+        > p:nth-of-type(2) {
+            flex-grow: 1;
+            border-radius: 8px;
+            border: 1px solid var(--color-primary-light);
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+            &:hover {
+                color: $color-dark-green;
+                // background-color: $color-green;
+                border: 1px solid $color-dark-green;
+                transition: all 0.2s linear;
+            }
+        }
+    }
+}

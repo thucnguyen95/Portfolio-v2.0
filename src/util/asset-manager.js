@@ -9,24 +9,24 @@ class AssetManager {
         return process.env.PUBLIC_URL;
     }
 
+    static imagesDir() {
+        return `${AssetManager.baseDir()}/images`;
+    }
+
     static getLandingPageImagePath() {
-        return `${AssetManager.baseDir()}${imagePaths.landingPage}`;
+        return `${AssetManager.imagesDir()}${imagePaths.landingPage}`;
     }
 
     static getProfileImagePath() {
-        return `${AssetManager.baseDir()}${imagePaths.profile}`;
+        return `${AssetManager.imagesDir()}${imagePaths.profile}`;
     }
 
-    static getInstitutionPath(key) {
-        switch(key) {
-        case institutionKeys.UCSD:
-            return `${AssetManager.baseDir()}${imagePaths.ucsd}`;
-        case institutionKeys.SDSU:
-            return `${AssetManager.baseDir()}${imagePaths.sdsu}`;
-        case institutionKeys.UCI:
-            return `${AssetManager.baseDir()}${imagePaths.uci}`;
-        }
-        return "";
+    static buildFullImagePath(imagePath) {
+        return `${AssetManager.imagesDir()}${imagePath}`;
+    }
+
+    static getContactImagePath() {
+        return `${AssetManager.imagesDir()}${imagePaths.contact}`;
     }
 }
 

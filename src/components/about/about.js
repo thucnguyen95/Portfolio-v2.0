@@ -13,12 +13,13 @@ class About extends Component {
     constructor(props) {
         super(props);
 
+        // Retrieve constants from Asset- and ContentManager
         this.LANDING_PAGE_COVER_IMAGE = AssetManager.getLandingPageImagePath();
         this.PROFILE_IMAGE = AssetManager.getProfileImagePath();
         this.DESCRIPTION = ContentManager.getAboutPageDescription();
         this.EDUCATION = ContentManager.getEducation();
         this.SKILLS = ContentManager.getTechnicalSkillsAsList();
-        console.log("skills: " + JSON.stringify(this.SKILLS));
+        this.PASTIMES = ContentManager.getPastimes();
     }
 
     /** =======================================================================
@@ -56,7 +57,7 @@ class About extends Component {
                         {this.EDUCATION.map((e) => (
                             <div className="card">
                                 <div>
-                                    <img src={AssetManager.getInstitutionPath(e.institutionKey)} />
+                                    <img src={AssetManager.buildFullImagePath(e.image)} />
                                 </div>
                                 <div>
                                     <p>{e.institution}</p>
@@ -105,6 +106,39 @@ class About extends Component {
 
                 <div className="pastimes-wrapper">
                     <h2>Pastimes</h2>
+                    <div className="pastime-block">
+                        <div className="pastime-image">
+                            <img src={AssetManager.buildFullImagePath(this.PASTIMES.boba.image)} />
+                        </div>
+                        <div className="pastime-blurb">
+                            <h3>{this.PASTIMES.boba.title}</h3>
+                            {this.PASTIMES.boba.description.map(d => (
+                                <p>{d}</p>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="pastime-block">
+                        <div className="pastime-blurb">
+                            <h3>{this.PASTIMES.games.title}</h3>
+                            {this.PASTIMES.games.description.map(d => (
+                                <p>{d}</p>
+                            ))}
+                        </div>
+                        <div className="pastime-image">
+                            <img src={AssetManager.buildFullImagePath(this.PASTIMES.games.image)} />
+                        </div>
+                    </div>
+                    <div className="pastime-block">
+                        <div className="pastime-image">
+                            <img src={AssetManager.buildFullImagePath(this.PASTIMES.outdoor.image)} />
+                        </div>
+                        <div className="pastime-blurb">
+                            <h3>{this.PASTIMES.outdoor.title}</h3>
+                            {this.PASTIMES.outdoor.description.map(d => (
+                                <p>{d}</p>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         );
