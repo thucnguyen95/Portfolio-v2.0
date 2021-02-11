@@ -1,5 +1,5 @@
 import { aboutPageDetails, networkingLinks, contactDetails } from "vars/vars";
-import { TECHNICAL_SKILLS } from "models/technical-skills";
+import { CATEGORICAL_SKILLS } from "models/technical-skills";
 
 class ContentManager {
     constructor() {
@@ -20,17 +20,6 @@ class ContentManager {
 
     static getEducation() {
         return aboutPageDetails.education;
-    }
-
-    static getTechnicalSkillsAsList() {
-        const list = [];
-        for (const [key, value] of Object.entries(TECHNICAL_SKILLS)) {
-            list.push({
-                category: key,
-                value: Object.values(value)
-            });
-        }
-        return list;
     }
 
     static getPastimes() {

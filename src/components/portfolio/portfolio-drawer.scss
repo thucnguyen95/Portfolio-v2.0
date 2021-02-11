@@ -1,0 +1,42 @@
+@import '../../vars/base';
+
+#portfolio-drawer {
+    padding: 12px 24px;
+    // border: 1px dashed green;
+
+    p {
+        color: var(--color-text-on-primary);
+    }
+
+    .filter-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        border-bottom: 1px solid $color-divider;
+
+        > p {
+            // color: red;
+            font-size: $rem-large;
+        }
+    }
+
+    .filter-body {
+        .filter-item {
+            margin-bottom: 8px;
+        }
+        .filter-category {
+            font-size: $rem-medium;
+            padding: 4px 0px;
+        }
+        .filter-skill {
+            display: flex;
+            align-items: center;
+            // border: 1px dashed orange;
+        }
+
+        .filter-skill p {
+            min-height: 24px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import '../../vars/base';
+
+#portfolio {
+    padding: 0px 24px;
+
+    h2 {
+        padding: 24px;
+    }
+    .sort-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0px 48px;
+    }
+
+    .portfolio-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .drawer {
+        // flex-basis: 20%;
+        flex: 0 1 auto;
+        border-right: 1px solid $color-divider;
+        margin-bottom: 24px;
+        // border: 1px dashed blue;
+    }
+    .grid {
+        // flex-basis: 75%;
+        flex: 1 0 auto;
+        // border: 1px dashed red;
+        margin: 0px 48px;
+    }
+    .grid-title {
+        font-size: $rem-xlarge;
+        padding: 24px;
+        // border: 1px dashed green;
+    }
+
+    .grid-container {
+        padding: 24px;
+    }
+
+    // .grid-item {
+    //     width: 300px;
+    //     height: 360px;
+    //     border: 1px dashed teal;
+    // }
+
+    .card-project {
+        max-width: 345px;
+        cursor: pointer;
+
+        &:hover {
+
+        }
+    }
+    .card-media {
+        // height: 200px;
+        height: 0;
+        padding-top: 56.25%; // 16:9
+        // border: 1px dashed red;
+    }
+    .card-chips {
+        display: flex;
+        flex-wrap: wrap;
+
+        > div {
+            margin: 8px;
+        }
+    }
+    .expand {
+        margin-left: auto;
+    }
+}

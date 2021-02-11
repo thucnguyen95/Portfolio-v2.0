@@ -3,7 +3,7 @@ import Chip from '@material-ui/core/Chip';
 
 import AssetManager from "util/asset-manager";
 import ContentManager from "util/content-manager";
-import { EXPERTISE } from "models/technical-skills";
+import { EXPERTISE, CATEGORICAL_SKILLS } from "models/technical-skills";
 import './about.scss';
 
 class About extends Component {
@@ -18,7 +18,6 @@ class About extends Component {
         this.PROFILE_IMAGE = AssetManager.getProfileImagePath();
         this.DESCRIPTION = ContentManager.getAboutPageDescription();
         this.EDUCATION = ContentManager.getEducation();
-        this.SKILLS = ContentManager.getTechnicalSkillsAsList();
         this.PASTIMES = ContentManager.getPastimes();
     }
 
@@ -85,13 +84,13 @@ class About extends Component {
                 <div className="technical-skills-wrapper">
                     <h2>Technical Skills</h2>
                     <div className="skills">
-                        {this.SKILLS.map(c => (
+                        {Object.keys(CATEGORICAL_SKILLS).map(c => (
                             <div>
                                 <div className="category">
-                                    <p>{c.category}</p>
+                                    <p>{c}</p>
                                 </div>
                                 <div className="skill-chips">
-                                    {c.value.map((s) => (
+                                    {CATEGORICAL_SKILLS[c].map((s) => (
                                         <div className={(s.expertise === EXPERTISE.ADVANCED) ? "chip-advanced" : "chip-proficient"}>
                                             <Chip label={s.name} />
                                         </div>
